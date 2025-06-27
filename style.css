@@ -44,6 +44,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+#nav #rnav a:hover {
+  transform: scale(1.15);
+  font-weight: 800;
+  color: #000;
+  filter: brightness(1.3);
 }
 
 #nav #rnav button {
@@ -52,10 +60,15 @@ body {
   background-color: black;
   color: white;
   font-weight: 600;
+  transition: all 0.3s ease-in;
 }
 
 #rnav button i {
   padding: 5px;
+}
+
+#rnav button:hover {
+  transform: scale(1.05);
 }
 
 #homepage #text {
@@ -73,9 +86,41 @@ body {
   font-size: 70px;
   letter-spacing: -1px;
 }
+
+#text h1 span {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/*  Hover effect with transform (no layout shift) */
+#text h1 span:hover {
+  transform: scale(1.2);
+  font-weight: 900;
+  filter: brightness(1.4);
+  z-index: 2;
+}
+
 #text p {
   font-size: 20px;
   font-weight: 900;
+}
+
+/* p word-wise hover */
+#text p span {
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover effect for words in <p> */
+#text p span:hover {
+  transform: scale(1.2);
+  font-weight: 800;
+  filter: brightness(1.4);
+  z-index: 1;
 }
 
 #text button {
@@ -84,6 +129,19 @@ body {
   background-color: black;
   color: white;
   margin-top: 10px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+#text button:nth-of-type(1) {
+  border: 1px solid rgb(113, 110, 110);
+}
+
+/* Button hover effect (entire button) */
+#text button:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  color: #fff;
 }
 
 #text button:nth-of-type(2) {
@@ -93,7 +151,7 @@ body {
   gap: 5px;
 }
 
-#text button:nth-of-type(2) i{
+#text button:nth-of-type(2) i {
   margin-right: 5px;
 }
 
@@ -135,12 +193,27 @@ body {
   text-decoration: none;
   color: rgb(42, 40, 40);
   font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+#master #mnav #rnav a:hover {
+  transform: scale(1.15);
+  font-weight: 800;
+  color: #000;
+  filter: brightness(1.3);
 }
 
 #master #mnav #rnav button {
   padding: 5px 7px;
   border-radius: 100px;
   border: none;
+  transition: all 0.3s ease-in;
+}
+
+#master #mnav #rnav button:hover {
+  transform: scale(1.05);
+  background-color: #333;
+  color: #fff;
 }
 
 #master #mtext h1 {
@@ -151,6 +224,23 @@ body {
   line-height: 70px;
   margin-top: 30px;
   color: rgb(26, 161, 132);
+  /* transition: all 0.3s ease;
+  cursor: pointer; */
+}
+
+#master #mtext h1 span {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  gap: 10px;
+}
+
+#master #mtext h1 span:hover {
+  transform: scale(1.2);
+  font-weight: 900;
+  filter: brightness(1.4);
+  z-index: 999;
 }
 
 #master #mrect {
@@ -165,9 +255,8 @@ body {
   width: 20%;
   height: 100%;
   border-radius: 15px;
-  box-shadow: 
-    0px 4px 5px 2px rgba(12, 12, 12, 0.3),   /* right-bottom */
-    0px 4px 5px 2px rgba(16, 16, 16, 0.3);   /* left-bottom */
+  box-shadow: 0px 4px 5px 2px rgba(12, 12, 12, 0.3),
+    /* right-bottom */ 0px 4px 5px 2px rgba(16, 16, 16, 0.3); /* left-bottom */
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
@@ -240,7 +329,7 @@ body {
   background-size: cover;
 }
 
-#master #mrect .rectangle .nickname{
+#master #mrect .rectangle .nickname {
   color: white;
   font-weight: 900;
   padding: 5px 10px;
@@ -252,7 +341,7 @@ body {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-#master #mrect .rectangle .nickname .dwar{
+#master #mrect .rectangle .nickname .dwar {
   /* width: 15px;
   height: 15px; */
   position: absolute;
@@ -264,33 +353,33 @@ body {
   border-right-color: transparent;
 }
 
-#master #mrect .rectangle:nth-of-type(7) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(7) .nickname .dwar {
   border-top-color: orange;
   left: 53%;
   top: 98%;
 }
 
-#master #mrect .rectangle:nth-of-type(6) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(6) .nickname .dwar {
   border-top-color: rgb(80, 80, 231);
 }
 
-#master #mrect .rectangle:nth-of-type(5) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(5) .nickname .dwar {
   border-top-color: rgb(227, 80, 104);
 }
 
-#master #mrect .rectangle:nth-of-type(4) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(4) .nickname .dwar {
   border-top-color: rgb(203, 152, 55);
 }
 
-#master #mrect .rectangle:nth-of-type(3) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(3) .nickname .dwar {
   border-top-color: rgb(86, 10, 10);
 }
 
-#master #mrect .rectangle:nth-of-type(2) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(2) .nickname .dwar {
   border-top-color: blue;
 }
 
-#master #mrect .rectangle:nth-of-type(1) .nickname .dwar{
+#master #mrect .rectangle:nth-of-type(1) .nickname .dwar {
   border-top-color: red;
   left: 20%;
 }
@@ -302,10 +391,10 @@ body {
 #master #mrect .rectangle:nth-of-type(4):hover,
 #master #mrect .rectangle:nth-of-type(5):hover,
 #master #mrect .rectangle:nth-of-type(6):hover,
-#master #mrect .rectangle:nth-of-type(7):hover{
- width: 24%;
- height: 112%;
- z-index: 2;
+#master #mrect .rectangle:nth-of-type(7):hover {
+  width: 24%;
+  height: 112%;
+  z-index: 2;
 }
 
 #master #mrect .rectangle:nth-of-type(1):hover .nickname,
@@ -314,11 +403,10 @@ body {
 #master #mrect .rectangle:nth-of-type(4):hover .nickname,
 #master #mrect .rectangle:nth-of-type(5):hover .nickname,
 #master #mrect .rectangle:nth-of-type(6):hover .nickname,
-#master #mrect .rectangle:nth-of-type(7):hover .nickname{
+#master #mrect .rectangle:nth-of-type(7):hover .nickname {
   opacity: 1;
-  box-shadow: 
-    0px 4px 5px 2px rgba(12, 12, 12, 0.3),   /* right-bottom */
-    0px 4px 5px 2px rgba(16, 16, 16, 0.3);   /* left-bottom */
+  box-shadow: 0px 4px 5px 2px rgba(12, 12, 12, 0.3),
+    /* right-bottom */ 0px 4px 5px 2px rgba(16, 16, 16, 0.3); /* left-bottom */
 }
 
 #master #mbtmtext {
@@ -327,26 +415,63 @@ body {
   font-size: 20px;
 }
 
-#master #mbtmtext p:nth-of-type(2){
+#master #mbtmtext p:nth-of-type(2) {
   margin-bottom: 15px;
 }
 
-#master #mbtmtext button{
+/*  Word-wise span hover effect */
+#master #mbtmtext p span {
+  display: inline-block;
+  transition: all 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+#master #mbtmtext p span:hover {
+  /* padding: 2px; */
+  transform: scale(1.2);
+  font-size: 25px;
+  font-weight: 800;
+  color: #28a745;
+  filter: brightness(1.3);
+}
+
+/*  Button Base Style */
+#master #mbtmtext button {
   margin-bottom: 12px;
   padding: 10px 20px;
   border-radius: 100px;
+  border: none;
   background-color: black;
-  color: rgb(219, 214, 214);
+  color: white;
   font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-#master #mbtmtext button:nth-of-type(2){
-  background-color: rgb(248, 244, 244);
+#master #mbtmtext button:nth-of-type(2) {
+  background-color: #e3e3e3;
   color: black;
-  border: none;
 }
+
+/*  Common Scale + Brightness */
+#master #mbtmtext button:nth-of-type(1):hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  background-color: #cdc8c8;
+  color: black;
+  /* border: 1px solid black; */
+}
+
+#master #mbtmtext button:nth-of-type(2):hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  background-color: black;
+  color: white;
+}
+
 /* spencer gabor */
-#spencer{
+#spencer {
   width: 100%;
   height: 100vh;
   padding: 30px 60px;
@@ -359,21 +484,21 @@ body {
 
 #spencer h1,
 #spencer h4,
-#spencer h5{
+#spencer h5 {
   text-transform: uppercase;
-} 
+}
 
-#spencer #sptext h4:nth-of-type(2){
+#spencer #sptext h4:nth-of-type(2) {
   font-weight: 200;
   color: #d2c2c2;
 }
 
-#spencer #sptext h1{
+#spencer #sptext h1 {
   font-size: 90px;
   margin-top: 30px;
 }
 
-#spencer #spimages{
+#spencer #spimages {
   width: 40%;
   height: 300px;
   margin-top: 30px;
@@ -382,26 +507,25 @@ body {
   position: relative;
 }
 
-#spencer #spimages .pic{
+#spencer #spimages .pic {
   width: 35%;
   height: 100%;
   border-radius: 15px;
   position: absolute;
-  box-shadow: 
-    0px 4px 5px 2px rgba(12, 12, 12, 0.3),   /* right-bottom */
-    0px 4px 5px 2px rgba(16, 16, 16, 0.3);   /* left-bottom */
+  box-shadow: 0px 4px 5px 2px rgba(12, 12, 12, 0.3),
+    /* right-bottom */ 0px 4px 5px 2px rgba(16, 16, 16, 0.3); /* left-bottom */
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-#spencer #spimages .pic:nth-of-type(1){
+#spencer #spimages .pic:nth-of-type(1) {
   z-index: 1;
   transform: rotate(3deg);
   background-image: url(https://i.pinimg.com/736x/1b/a4/08/1ba4089fed09c21515d41b71608c2180.jpg);
   background-position: center;
   background-size: cover;
-} 
+}
 
-#spencer #spimages .pic:nth-of-type(2){
+#spencer #spimages .pic:nth-of-type(2) {
   z-index: 2;
   top: -9%;
   left: 21%;
@@ -411,7 +535,7 @@ body {
   background-size: cover;
 }
 
-#spencer #spimages .pic:nth-of-type(3){
+#spencer #spimages .pic:nth-of-type(3) {
   z-index: 3;
   top: 4%;
   left: 42%;
@@ -421,7 +545,7 @@ body {
   background-size: cover;
 }
 
-#spencer #spimages .pic:nth-of-type(4){
+#spencer #spimages .pic:nth-of-type(4) {
   z-index: 4;
   top: -5%;
   left: 65%;
@@ -431,13 +555,13 @@ body {
   background-size: cover;
 }
 
-#spencer #spimages .pic:hover{
+#spencer #spimages .pic:hover {
   width: 44%;
   height: 120%;
   z-index: 10;
 }
 
-#spencer #spimages .pic .nam{
+#spencer #spimages .pic .nam {
   border-radius: 100px;
   padding: 5px 10px;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
@@ -449,14 +573,13 @@ body {
   opacity: 0;
 }
 
-#spencer #spimages .pic:hover .nam{
+#spencer #spimages .pic:hover .nam {
   opacity: 1;
-  box-shadow: 
-    0px 4px 5px 2px rgba(12, 12, 12, 0.3),   /* right-bottom */
-    0px 4px 5px 2px rgba(16, 16, 16, 0.3);   /* left-bottom */
+  box-shadow: 0px 4px 5px 2px rgba(12, 12, 12, 0.3),
+    /* right-bottom */ 0px 4px 5px 2px rgba(16, 16, 16, 0.3); /* left-bottom */
 }
 
-#spencer #spimages .pic .nam .dwar{
+#spencer #spimages .pic .nam .dwar {
   position: absolute;
   left: 35%;
   top: 95%;
@@ -466,32 +589,265 @@ body {
   border-right-color: transparent;
 }
 
-#spencer #spbtmtext{
+#spencer #spbtmtext {
   width: 100%;
 }
 
-#spencer #spbtmtext h1:nth-of-type(2){
+#spencer #spbtmtext h1:nth-of-type(2) {
   margin-bottom: 30px;
 }
 
 #spencer #spbtmtext h1:nth-of-type(1),
-#spencer #spbtmtext h1:nth-of-type(2){
- font-size: 90px;
- color: #d2c2c2;
+#spencer #spbtmtext h1:nth-of-type(2) {
+  font-size: 90px;
+  color: #d2c2c2;
 }
 
-#spencer #spbtmtext h5{
+#spencer #spbtmtext h5 {
   color: #d2c2c2;
   line-height: 2;
 }
+
 /* library page */
-#main #library{
+#library {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+#library #ltext h1 {
+  font-size: 70px;
+}
+
+#library #ltext p {
+  font-size: 20px;
+}
+
+#library #ltext p:nth-of-type(1) img {
+  width: 30px;
+  height: 20px;
+}
+
+#library #ltext button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 100px;
+}
+
+#library #limages {
+  width: 80%;
+  height: 250px;
+  position: relative;
+  display: flex;
+  margin-left: 4%;
+}
+
+#library #limages .limg {
+  width: 25%;
+  height: 100%;
+}
+
+#library #limages .limg1 {
+  border-radius: 10px;
+  transform: rotate(-13deg);
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  background-image: url(https://i.pinimg.com/736x/7c/91/bb/7c91bb1ddc92d373527768a8248f3d2f.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg2 {
+  border-radius: 10px;
+  transform: rotate(9deg);
+  z-index: 9;
+  position: absolute;
+  left: 20%;
+  top: 25%;
+  background-image: url(https://i.pinimg.com/736x/5b/00/0d/5b000ddbf488b8865f387fd7441c9a9f.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg3 {
+  border-radius: 10px;
+  transform: rotate(-7deg);
+  z-index: 8;
+  position: absolute;
+  left: 30%;
+  top: 12%;
+  background-image: url(https://i.pinimg.com/736x/16/47/18/164718a205ebb525e049b2093210139b.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg4 {
+  border-radius: 10px;
+  transform: rotate(7deg);
+  z-index: 4;
+  position: absolute;
+  left: 45%;
+  top: 25%;
+  background-image: url(https://i.pinimg.com/736x/8f/1d/5b/8f1d5b4d6036cbf3e04b0abb8119f732.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg5 {
+  border-radius: 10px;
+  transform: rotate(17deg);
+  z-index: 7;
+  position: absolute;
+  left: 65%;
+  top: 60%;
+  background-image: url(https://i.pinimg.com/736x/ba/98/74/ba9874f31c56940bebd8317c748c287e.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg6 {
+  border-radius: 10px;
+  transform: rotate(25deg);
+  z-index: 3;
+  position: absolute;
+  left: 60%;
+  top: 30%;
+  background-image: url(https://i.pinimg.com/736x/fd/2d/c4/fd2dc4c476952370b8868baf65ec5c99.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#library #limages .limg:hover {
+  width: 30%;
+  height: 125%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  top: -70%;
+  z-index: 999;
+}
+
+/* trusted page */
+#trusted {
+  width: 100%;
+  padding-top: 1px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#trustedtext {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#trustedtext h4 {
+  opacity: 0.5;
+}
+
+#trustedtext h1 {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+
+#trustedimage {
+  width: 70%;
+  height: 300px;
+  margin-right: 100px;
+  margin-top: 100px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+#trustedimage .timg {
+  width: 25%;
+  height: 270px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#trustedimage .timg1 {
+  position: absolute;
+  top: 10%;
+  left: 18%;
+  transform: rotate(8deg);
+  z-index: 1;
+  color: white;
+}
+
+#trustedimage .timg2 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: rotate(-7deg);
+  z-index: 3;
+}
+
+#trustedimage .timg3 {
+  position: absolute;
+  top: -10%;
+  left: 43%;
+  transform: rotate(-7deg);
+  z-index: 2;
+  color: white;
+}
+
+#trustedimage .timg4 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  transform: rotate(7deg);
+  z-index: 4;
+}
+
+#trustedimage .timg5 {
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  transform: rotate(10deg);
+  z-index: 0;
+}
+
+#trustedimage .timg1 i,
+#trustedimage .timg2 i,
+#trustedimage .timg5 i {
+  color: rgb(192, 104, 192);
+}
+
+#trustedimage .timg .tline {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+#trustedimage .timg:hover {
+  width: 30%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+  z-index: 999;
+}
+
+#trustedimage .timg1:hover,
+#trustedimage .timg3:hover,
+#trustedimage .timg5:hover {
+  top: -30%;
+}
+
+#trustedimage .timg2:hover,
+#trustedimage .timg4:hover {
+  top: 70%;
 }
